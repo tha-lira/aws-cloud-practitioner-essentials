@@ -1,0 +1,129 @@
+# Guia Completo e Prático: AWS Cloud Practitioner Essentials
+
+---
+
+## 1. Conceito e Benefícios da Computação em Nuvem
+
+- **Computação em nuvem:** fornecimento de recursos (computação, armazenamento, redes) pela internet sob demanda.
+- **Benefícios principais:**
+  - Redução de custos (pague pelo que usar)
+  - Escalabilidade rápida (aumentar/diminuir recursos conforme necessidade)
+  - Alta disponibilidade e recuperação de desastres
+  - Segurança integrada e conformidade com normas
+
+---
+
+## 2. Modelos de Implantação e Serviço
+
+- **Modelos de implantação:**
+  - **Nuvem Pública:** acesso aberto para qualquer cliente (ex: AWS)
+  - **Nuvem Privada:** infraestrutura dedicada à empresa
+  - **Nuvem Híbrida:** combinação dos dois modelos acima
+
+- **Modelos de serviço:**
+  - **IaaS (Infrastructure as a Service):** infraestrutura virtual, como servidores e armazenamento (ex: EC2)
+  - **PaaS (Platform as a Service):** plataforma para desenvolvimento e implantação (ex: Elastic Beanstalk)
+  - **SaaS (Software as a Service):** software acessado pela internet (ex: WorkMail)
+
+---
+
+## 3. Serviços Principais da AWS
+
+| Serviço       | Descrição                                     | Caso de Uso                      |
+|---------------|-----------------------------------------------|---------------------------------|
+| **EC2**       | Servidores virtuais configuráveis             | Hospedar sites, apps             |
+| **Lambda**    | Execução de código sem servidor (serverless) | Funções acionadas por eventos   |
+| **S3**        | Armazenamento de objetos                       | Arquivos, backups, mídia        |
+| **EBS**       | Disco em bloco para EC2                        | Armazenamento persistente       |
+| **Glacier**   | Arquivamento a longo prazo                     | Backup de dados antigos         |
+| **RDS**       | Banco relacional gerenciado                     | Bancos SQL para apps             |
+| **DynamoDB**  | Banco NoSQL gerenciado                         | Apps que precisam de alta velocidade|
+| **VPC**       | Rede privada isolada                           | Isolamento de recursos          |
+| **Route 53**  | DNS gerenciado                                | Gerenciamento de domínios       |
+| **CloudFront**| CDN para entrega rápida de conteúdo            | Sites e vídeos globalmente      |
+
+---
+
+## 4. Modelo de Responsabilidade Compartilhada
+
+| Responsabilidade | Quem Faz                                   | Exemplos                              |
+|------------------|--------------------------------------------|-------------------------------------|
+| Segurança **da** nuvem | AWS (infraestrutura, hardware, rede)       | Data centers, servidores, storage   |
+| Segurança **na** nuvem | Cliente (dados, configurações, acessos)     | IAM, dados, sistema operacional     |
+
+---
+
+## 5. Detalhes Importantes de Segurança
+
+- **IAM:** controle de acesso granular (usuários, grupos, políticas).
+- **MFA:** autenticação multifator para proteger contas.
+- **Criptografia:** dados em trânsito (SSL/TLS) e em repouso (KMS).
+- **Monitoramento:** CloudWatch para métricas e CloudTrail para auditoria.
+- **Política do menor privilégio:** dar só as permissões necessárias.
+
+---
+
+## 6. Regiões e Zonas de Disponibilidade (AZs)
+
+- **Regiões:** locais geográficos onde AWS tem data centers (ex: us-east-1, sa-east-1).
+- **Zonas de Disponibilidade:** data centers independentes dentro de uma região para redundância.
+- **Importância:** alta disponibilidade, recuperação rápida e baixa latência.
+
+---
+
+## 7. Tipos de Instâncias EC2
+
+| Tipo                    | Característica                      | Uso Comum                          |
+|-------------------------|-----------------------------------|----------------------------------|
+| **General Purpose**      | Balanceado CPU/memória             | Aplicações comuns                 |
+| **Compute Optimized**    | Mais CPU                          | Processamento intensivo           |
+| **Memory Optimized**     | Mais memória                      | Bancos de dados, caching          |
+| **Storage Optimized**    | Armazenamento local rápido        | Big data, análise, armazenamento  |
+
+---
+
+## 8. Serverless e Vantagens
+
+- **Serverless:** execução de código sem gerenciar servidores (ex: Lambda).
+- **Vantagens:** menor custo, escalabilidade automática, menos manutenção.
+- **Quando usar:** tarefas rápidas, eventos, APIs simples.
+
+---
+
+## 9. Suporte AWS
+
+| Plano       | Características Principais                     | Público-Alvo                   |
+|-------------|-----------------------------------------------|-------------------------------|
+| Básico      | Suporte para faturamento, comunidade           | Todos (gratuito)               |
+| Developer   | Suporte para desenvolvimento, resposta em horas | Pequenos projetos             |
+| Business    | Suporte 24/7, resposta rápida, casos críticos | Empresas médias e grandes     |
+| Enterprise  | Suporte dedicado, consultoria, arquitetos      | Grandes empresas              |
+
+---
+
+## 10. Custos e Faturamento
+
+- **Modelos de cobrança:**
+  - **Pay-as-you-go:** paga pelo que usar
+  - **Reserved Instances:** reserva por 1 ou 3 anos com desconto
+  - **Savings Plans:** compromisso flexível com descontos
+  - **Free Tier:** uso gratuito limitado (12 meses)
+
+- **Dicas para economizar:**
+  - Use regiões mais baratas
+  - Use instâncias Spot para cargas flexíveis
+  - Desligue recursos não usados
+  - Monitore custos com AWS Cost Explorer e Billing Dashboard
+
+---
+
+## 11. Arquitetura Resiliente e Escalável
+
+- **Auto Scaling:** ajuste automático do número de instâncias conforme demanda.
+- **Elastic Load Balancer (ELB):** distribui tráfego entre instâncias para melhorar performance e disponibilidade.
+- **Backup e recuperação:** uso de snapshots, S3, Glacier.
+- **Design multi-AZ:** distribuir recursos entre zonas para evitar falhas.
+
+---
+
+
